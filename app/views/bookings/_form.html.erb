@@ -10,22 +10,28 @@
       </ul>
     </div>
   <% end %>
-  
     <div class="container-fluid" style="width:500px" >
-    <div class="mb-3">
-      <%= form.label :started_at, style: "display: block"%>
-      <%= form.datetime_field :started_at, class: "form-control"  %>
-    </div>
+    
+      <% if current_page?(controller: 'bookings', action: 'new') %>
+        <h2> Create Booking </h2>
+      <% else %>
+        <h2> Edit Booking </h2>
+      <% end %>
+
+      <div class="mb-3">
+        <%= form.label :started_at, style: "display: block"%>
+        <%= form.datetime_field :started_at, class: "form-control"  %>
+      </div>
 
 
-    <div class="mb-3" >
-      <%= form.label :ended_at, style: "display: block" %>
-      <%= form.datetime_field :ended_at, class: "form-control"  %>
-    </div>
+      <div class="mb-3" >
+        <%= form.label :ended_at, style: "display: block" %>
+        <%= form.datetime_field :ended_at, class: "form-control"  %>
+      </div>
 
-    <div class="mb-3">
+      <div class="mb-3">
 
-    <%= form.hidden_field :location_id, value: @booking.location_id %>
+      <%= form.hidden_field :location_id, value: @booking.location_id %>
   </div>
   
    <%= form.hidden_field :guest_id, value: @booking.guest_id %>
