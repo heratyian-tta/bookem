@@ -20,6 +20,15 @@ Bundler.require(*Rails.groups)
 
 module Rails8Template
   class Application < Rails::Application
+   
+    
+
+#    before_action :configure_permitted_parameters, if: :devise_controller?
+
+ #  devise_parameter_sanitizer.permit(:sign_up, :keys => [:username, :avatar_url])
+
+  #  devise_parameter_sanitizer.permit(:account_update, :keys => [:avatar_url])
+  # end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
