@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /bookings or /bookings.json
   def index
@@ -12,7 +13,7 @@ class BookingsController < ApplicationController
 
   # GET /bookings/new
   def new
-    @booking = Booking.new
+    @booking = Booking.new(location_id: params[:location_id]) 
   end
 
   # GET /bookings/1/edit
@@ -22,6 +23,7 @@ class BookingsController < ApplicationController
   # POST /bookings or /bookings.json
   def create
     @booking = Booking.new(booking_params)
+    @booking.guest = current_user
 
     respond_to do |format|
       if @booking.save

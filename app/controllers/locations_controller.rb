@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy ]
 
   # GET /locations or /locations.json
   def index
@@ -9,7 +10,7 @@ class LocationsController < ApplicationController
   # GET /locations/1 or /locations/1.json
   def show
     @location = Location.find(params[:id])
-     @bookings = @location.bookings
+    @bookings = @location.bookings
   end
 
   # GET /locations/new
@@ -24,6 +25,7 @@ class LocationsController < ApplicationController
   # POST /locations or /locations.json
   def create
     @location = Location.new(location_params)
+    @location.host = current_user
 
     respond_to do |format|
       if @location.save
@@ -67,6 +69,6 @@ class LocationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def location_params
-      params.expect(location: [ :name, :description, :address, :city, :state, :postal_code, :host_id ])
+      params.expect(location: [ :name, :description, :address, :city, :state, :postal_code ])
     end
 end

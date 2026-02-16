@@ -1,5 +1,7 @@
 <div id="<%= dom_id location %>">
 
+  <%= link_to 'Book Me', new_booking_path(location_id: location.id) %>
+  <h1><%= location.name  %></h1>
   <div class="card location-card">
     <div class="location-card-media">
       <img
