@@ -1,7 +1,6 @@
 <div id="<%= dom_id location %>">
 
-  <%= link_to 'Book Me', new_booking_path(location_id: location.id) %>
-  <h1><%= location.name  %></h1>
+  
   <div class="card location-card">
     <div class="location-card-media">
       <img
@@ -31,7 +30,6 @@
     <div class="card-body">
       <% if !current_page?(location_path(location)) %>
         <%= link_to "Show this location", location, class: "card-link" %>
-        <%= link_to "New location", new_location_path, class: "card-link" %>
       <% end %>
 
     </div>
