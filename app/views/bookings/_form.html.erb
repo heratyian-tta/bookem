@@ -10,10 +10,18 @@
       </ul>
     </div>
   <% end %>
-  <div class="container-fluid" style="width:500px" >
+
+ 
+    <% if current_page?(controller: 'bookings', action: 'new') %>
+      <div class="container-fluid" style="width:500px" >
+    <% elsif current_page?(controller: 'locations', action: 'show')  %>
+      <div class="container-fluid" style="width:250px;" >
+  <% end %>
 
     <% if current_page?(controller: 'bookings', action: 'new') %>
       <h2> Create Booking </h2>
+    <% elsif current_page?(controller: 'locations', action: 'show')  %>
+      <h2> Book Now </h2>
     <% else %>
       <h2> Edit Booking </h2>
     <% end %>
