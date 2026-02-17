@@ -35,13 +35,13 @@ justify-content: space-around;
 }
 
 .location-card {
-  width: 18rem;
+  width: 22rem;
   margin: 25px;
 }
 
 .location-card-media {
   position: relative;
-  height: 150px;
+  height: 220px;
   overflow: hidden;
 }
 

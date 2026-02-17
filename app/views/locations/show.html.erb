@@ -1,5 +1,4 @@
 <p style="color: green"><%= notice %></p>
-<%= link_to 'Book Me', new_booking_path(location_id: @location.id) %>
   <h1><%= @location.name  %></h1>
 
 
@@ -58,6 +57,10 @@
       });
   });
 </script>
+<div>
+  <h2>Book Now</h2>
+  <%= render "bookings/form", booking: @booking %>
+</div>
 
 
 <h2>Bookings Calendar</h2>

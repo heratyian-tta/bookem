@@ -11,6 +11,7 @@ class LocationsController < ApplicationController
   def show
     @location = Location.find(params[:id])
     @bookings = @location.bookings
+    @booking = Booking.new(location: @location, guest: current_user)
   end
 
   # GET /locations/new

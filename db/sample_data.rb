@@ -45,6 +45,7 @@ module SampleData
         city: Faker::Address.city,
         state: Faker::Address.state_abbr,
         postal_code: Faker::Address.postcode,
+        image: Faker::LoremFlickr.image(size: "800x600", search_terms: ["workspace"]),
         host: hosts.sample
       )
     end

@@ -29,11 +29,11 @@
     </div>
 
     <div class="mb-3">
-
-      <p> You are booking <%= @booking.location.name %></p>
-      <%= form.hidden_field :location_id, value: @booking.location_id %>
+      <p> You are booking <%= booking.location.name %></p>
+      <%= form.hidden_field :location_id, value: booking.location_id %>
     </div>
-    <%= form.hidden_field :guest_id, value: @booking.guest_id %>
+    
+    <%= form.hidden_field :guest_id, value: booking.guest_id %>
 
     <div>
       <%= form.submit %>
