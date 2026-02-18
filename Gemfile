@@ -76,7 +76,7 @@ gem "rollbar"
 gem "simple_form"
 gem "strip_attributes"
 gem "validate_url"
-gem "letter_opener"
+
 
 group :development do
   gem "annotaterb"
@@ -85,6 +85,7 @@ group :development do
   gem "dev_toolbar", "~> 2.1.0"
   gem "draft_generators", "~> 0.0.5"
   gem "haikunator"
+  gem "letter_opener"
   gem "pry-rails"
   gem "rails_db", "~> 2.5.0"
   gem "rails-erd"
