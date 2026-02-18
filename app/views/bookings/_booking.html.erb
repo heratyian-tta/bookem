@@ -1,4 +1,6 @@
 <div id="<%= dom_id booking %>">
+<% if current_user.id == booking.guest_id || booking.location.host_id == current_user.id %>
+  
   <p>
     <strong>Started at:</strong>
     <%= booking.started_at %>
@@ -20,3 +22,4 @@
   </p>
 
 </div>
+<% end %>
