@@ -1,17 +1,17 @@
-<p style="color: green"><%= notice %></p>
+
 
 <% content_for :title, "Bookings" %>
 
 <h1>Bookings</h1>
-<% if current_user.id == @booking.guest.id || @booking.location.host_id == current_user.id %>
   <div id="bookings">
     <% @bookings.each do |booking| %>
+<% if current_user.id == booking.guest.id || booking.location.host_id == current_user.id %>
       <%= render booking %>
       <p>
         <%= link_to "Show this booking", booking %>
       </p>
     <% end %>
-  </div>
 <% end %>
+  </div>
 
-<%= link_to "New booking", new_booking_path %>
+<%= link_to "Back to Locations", locations_path %>
