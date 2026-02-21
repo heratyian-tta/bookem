@@ -3,10 +3,9 @@
   
   <div class="card location-card">
     <div class="location-card-media">
-      <img
-        src=<%= location.image %>
-        class="card-img"
-        alt="Location photo">
+      <% if location.image? %>
+        <%= image_tag location.image.url, class: "card-img", alt: "Location photo" %>
+      <% end %>
       <div class="card-img-overlay location-card-overlay">
         <h5 class="card-title mb-3" style="color: white;"><%= location.name %></h5>
       </div>
@@ -16,10 +15,11 @@
       <% if current_page?(location_path(location)) %>
       <li class="list-group-item"><span>City:</span> <%= location.city %></li>
       <li class="list-group-item"><span>State:</span> <%= location.state %></li>
+      <li class="list-group-item"><span>Postal Code:</span> <%= location.postal_code %></li>
       <li class="list-group-item"><span>Host:</span> <%= location.host.email %></li>
 
         <li class="list-group-item"><span>Show page only:</span> <%= location.address %></li>
-        <li class="list-group-item"><span>Host:</span> it works</li>
+      
     </ul>
     
     <div class="card-body">
@@ -27,9 +27,9 @@
     </div>
       <% end %>
 
-    <div class="card-body">
+    <div class="card-footer bg-transparent border-top-0">
       <% if !current_page?(location_path(location)) %>
-        <%= link_to "Show this location", location, class: "card-link" %>
+        <%= link_to "Show This Location", location,  class: "btn btn-sm btn-primary" %>
       <% end %>
 
     </div>

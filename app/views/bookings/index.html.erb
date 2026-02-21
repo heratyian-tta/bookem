@@ -3,15 +3,14 @@
 <% content_for :title, "Bookings" %>
 
 <h1>Bookings</h1>
-  <div id="bookings">
-    <% @bookings.each do |booking| %>
-<% if current_user.id == booking.guest.id || booking.location.host_id == current_user.id %>
-      <%= render booking %>
-      <p>
-        <%= link_to "Show this booking", booking %>
-      </p>
+<div id="bookings" class="row g-3">
+  <% @bookings.each do |booking| %>
+    <% if current_user.id == booking.guest_id || booking.location.host_id == current_user.id %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <%= render booking %>
+      </div>
     <% end %>
-<% end %>
-  </div>
+  <% end %>
+</div>
 
 <%= link_to "Back to Locations", locations_path %>

@@ -100,7 +100,7 @@ module SampleData
         city: location[:city],
         state: location[:state],
         postal_code: location[:postal_code],
-        image: location[:image],
+        remote_image_url: location[:image],
         host: hosts.sample
       )
     end

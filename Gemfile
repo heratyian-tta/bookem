@@ -82,7 +82,6 @@ group :development do
   gem "annotaterb"
   gem "better_errors"
   gem "binding_of_caller"
-  gem "dev_toolbar", "~> 2.1.0"
   gem "draft_generators", "~> 0.0.5"
   gem "haikunator"
   gem "letter_opener"

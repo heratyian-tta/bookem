@@ -1,25 +1,22 @@
-<div id="<%= dom_id booking %>">
-<% if current_user.id == booking.guest_id || booking.location.host_id == current_user.id %>
-  
-  <p>
-    <strong>Started at:</strong>
-    <%= booking.started_at %>
-  </p>
-
-  <p>
-    <strong>Ended at:</strong>
-    <%= booking.ended_at %>
-  </p>
-
-  <p>
-    <strong>Guest:</strong>
-    <%= booking.guest.first_name %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= booking.location.name %>
-  </p>
-
+<div id="<%= dom_id booking %>" class="card h-100">
+  <div class="card-body" style>
+    <h5 class="card-title"><%= booking.location.name %></h5>
+    <p class="card-text mb-2">
+      <strong>Started at:</strong>
+      <%= booking.started_at %>
+    </p>
+    <p class="card-text mb-2">
+      <strong>Ended at:</strong>
+      <%= booking.ended_at %>
+    </p>
+    <p class="card-text mb-0">
+      <strong>Guest:</strong>
+      <%= booking.guest.first_name %>
+    </p>
+  </div>
+  <% if current_page?(controller: 'bookings', action: 'index') %>
+      <div class="card-footer bg-transparent border-top-0">
+        <%= link_to "Show This Booking", booking, class: "btn btn-sm btn-primary" %>
+      </div>
+  <% end %>
 </div>
-<% end %>
