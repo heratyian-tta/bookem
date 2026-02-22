@@ -1,15 +1,15 @@
 <div id="<%= dom_id location %>">
 
   
-  <div class="card location-card">
-    <div class="location-card-media">
+  <div class="card location-card <%= current_page?(location_path(location)) ? "location-card-show" : "location-card-index" %>">
+    <%= link_to location, class: "location-card-media" do %>
       <% if location.image? %>
         <%= image_tag location.image.url, class: "card-img", alt: "Location photo" %>
       <% end %>
       <div class="card-img-overlay location-card-overlay">
         <h5 class="card-title mb-3" style="color: white;"><%= location.name %></h5>
       </div>
-    </div>
+    <% end %>
 
     <ul class="list-group list-group-flush">
       <% if current_page?(location_path(location)) %>
@@ -27,12 +27,7 @@
     </div>
       <% end %>
 
-    <div class="card-footer bg-transparent border-top-0">
-      <% if !current_page?(location_path(location)) %>
-        <%= link_to "Show This Location", location,  class: "btn btn-sm btn-primary" %>
-      <% end %>
-
-    </div>
+    <%# Card footer removed per request %>
   </div>
 
 </div>

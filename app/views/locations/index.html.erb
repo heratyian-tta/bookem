@@ -2,8 +2,37 @@
 
 <% content_for :title, "Locations" %>
 
-<h1>Locations</h1>
+<section class="locations_hero">
+  <div class="locations_hero_media" aria-hidden="true">
+    <video class="locations_hero_video" autoplay muted loop playsinline preload="metadata">
+      <source src="<%= asset_path('location_highlight_2.mp4') %>" type="video/mp4">
+    </video>
+  </div>
+  <div class="locations_hero_overlay" aria-hidden="true"></div>
 
+  <div class="locations_hero_content">
+    <div class="locations_hero_details">
+      <div>
+        <h2>About Us</h2>
+        <p>
+      We bridge the gap between small business owners and local customers seeking premium services and accommodations. Our team prioritizes clarity, safety, and local expertise so you can book with total confidence. List your business and service details today, or find your next local booking below!
+
+        </p>
+      </div>
+
+      <div>
+        <h2>Our Goal</h2>
+        <p>
+          Make it easy to discover locations that fit your needs, with transparent details and a smooth booking experience.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style=" margin-left: 50px; ">
+    <h1>Choose a location to make a booking</h1>
+</div>
 
 <div id="locations">
   <% @locations.each do |location| %>

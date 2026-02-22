@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light" >
+<html data-theme="light">
   <head>
     <title><%= content_for(:title) || "Capstone Bookem Project" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,7 +22,7 @@
 
     <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.jade.min.css"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.zinc.min.css"
 >
 
     <!-- The official Bootstrap utilities stylesheet -->
@@ -39,9 +39,7 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js"></script>
   </head>
 
-  <body>
-
-<body class="pico">
+  <body class="pico">
     <header>
       <div class="container-two-thirds">
         <nav>
@@ -72,6 +70,11 @@
               <li>
                 <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %>
               </li>
+              <li>
+                <button type="button" class="secondary" data-theme-toggle aria-pressed="false">
+                  Dark mode
+                </button>
+              </li>
             </ul>
           <% else %>
             <ul>
@@ -80,6 +83,11 @@
               </li>
               <li>
                 <a href="/users/sign_up">Sign Up</a>
+              </li>
+              <li>
+                <button type="button" class="secondary" data-theme-toggle aria-pressed="false">
+                  Dark mode
+                </button>
               </li>
             </ul>
           <% end %>
