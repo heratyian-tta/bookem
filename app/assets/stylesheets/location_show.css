@@ -116,7 +116,7 @@ html[data-theme="dark"] .simple-calendar .calendar-heading span {
 
 html[data-theme="dark"] body {
   background-color: #0f1115;
-  color: #e6e6e6;
+  color: #b2b6c2;
 }
 
 @keyframes calendar-slide-left {

@@ -18,3 +18,11 @@ header {
   z-index: 1000;
   background: inherit;
 }
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .card .card-header,
+html[data-theme="dark"] .card .card-body,
+html[data-theme="dark"] .card .card-footer,
+html[data-theme="dark"] .card .list-group-item {
+  color: #b0b4bf;
+}
