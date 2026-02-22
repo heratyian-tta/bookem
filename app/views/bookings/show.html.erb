@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
+
 
 <%= render @booking %>
 
 <div>
-<% if current_user.id == @booking.host.id %>
-    <%= link_to "Edit this booking", edit_booking_path(@booking) %> |
+<% if current_user.id == @booking.host.id || current_user.id == @booking.guest.id %>
+    <%= link_to "Edit this booking", edit_booking_path(@booking) %> 
 
   <%= button_to "Destroy this booking", @booking, method: :delete %>
 <% end %>

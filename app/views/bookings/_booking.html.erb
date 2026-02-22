@@ -9,10 +9,12 @@
       <strong>Ended at:</strong>
       <%= booking.ended_at %>
     </p>
+
     <p class="card-text mb-0">
       <strong>Guest:</strong>
       <%= booking.guest.first_name %>
     </p>
+
   </div>
   <% if current_page?(controller: 'bookings', action: 'index') %>
       <div class="card-footer bg-transparent border-top-0">
