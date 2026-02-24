@@ -163,6 +163,9 @@ html[data-theme="dark"] body {
 
 .location-card-index {
   margin: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
 }
 
 .location-card-index .card-body,
@@ -178,7 +181,10 @@ html[data-theme="dark"] body {
 
 .location-card-show {
   width: 32rem;
-  margin: 24px auto;
+  margin: 0 auto 24px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
 }
 
 .location-card-media {
@@ -189,6 +195,26 @@ html[data-theme="dark"] body {
 
 .location-card-show .location-card-media {
   height: 280px;
+}
+
+.location-card-media-standalone {
+  border: 1px solid var(--bs-card-border-color, rgba(0, 0, 0, 0.175));
+  border-bottom: 0;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.location-card-media-standalone-show {
+  width: 32rem;
+  height: 280px;
+  margin: 24px auto 0;
+}
+
+.location-card-media-standalone-index {
+  width: 18rem;
+  height: 180px;
+  margin: 0;
+  display: block;
 }
 
 .location-card-media .card-img {
