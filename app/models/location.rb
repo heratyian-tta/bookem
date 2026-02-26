@@ -15,6 +15,12 @@
 #  host_id     :integer
 #
 class Location < ApplicationRecord
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :state, presence: true
+  validates :postal_code, presence: true
+  validates :city, presence: true
+
 
   belongs_to :host, required: true, class_name: "User", foreign_key: "host_id", counter_cache: true
 

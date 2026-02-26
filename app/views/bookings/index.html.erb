@@ -2,7 +2,7 @@
 
 <% content_for :title, "Bookings" %>
 
-<h1>Bookings</h1>
+<h1>Your Bookings</h1>
 <div id="bookings" class="row g-3">
   <% @bookings.each do |booking| %>
     <% if current_user.id == booking.guest_id || booking.location.host_id == current_user.id %>
