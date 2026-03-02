@@ -1,5 +1,2 @@
-# rails-8-template
-
-For your AppDev Projects!
-
-All files are covered by the MIT license, see [LICENSE.txt](LICENSE.txt).
+# BookEm
+  A secure, user-friendly, and simple scheduling app tailored for small businesses to manage appointments without needing an in-house IT team. It enables automated bookings, calendar syncing, and client self-scheduling to eliminate scheduling chaos and improve efficiency. 
