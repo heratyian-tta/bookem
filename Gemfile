@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'web_rake'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
@@ -50,6 +51,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
+  
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
@@ -89,7 +91,6 @@ group :development do
   gem "rails_db", "~> 2.5.0"
   gem "rails-erd"
   gem "rufo"
-  gem 'web_rake'
 end
 
 group :development, :test do
