@@ -1,10 +1,5 @@
 # Prioritized Improvement Plan — BookEm
 
-Generated: 2026-03-04
-Reviewer: Claude Code (DPI Tech Apprenticeship Staff Review)
-
----
-
 ## P0 — Critical: Security / Architecture / Broken Patterns
 
 These issues must be fixed before the project can be considered functional or safe.
