@@ -5,7 +5,7 @@
 - Project Name: BookEm
 - Reviewer Name: Claude Code, Ian Heraty, Adolfo Nava
 - Repository URL: <https://github.com/ricealonzo/bookem>
-- Feedback Pull Request URL: 
+- Feedback Pull Request URL: <https://github.com/ricealonzo/bookem/pull/1>
 
 ---
 
